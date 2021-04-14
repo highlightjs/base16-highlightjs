@@ -1,6 +1,6 @@
 /*!
-  Theme: {{scheme-name}}
-  Author: {{scheme-author}}
+  Theme: {{{scheme-name}}}
+  Author: {{{scheme-author}}}
 
   This theme was auto-generated from {{scheme-slug}} by Highlight.js Base16
   template builder.
@@ -26,11 +26,14 @@ base0F - #{{base0F-hex}} -  Deprecated, Opening/Closing Embedded Language Tags, 
 */
 
 .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
   color: #{{base05-hex}};
   background: #{{base00-hex}};
 }
 
-::selection {
+.hljs ::selection {
   color: #{{base02-hex}};
 }
 
@@ -102,6 +105,7 @@ base0F - #{{base0F-hex}} -  Deprecated, Opening/Closing Embedded Language Tags, 
 .hljs-built_in,
 .hljs-doctag, /* guessing */
 .hljs-quote,
+.hljs-keyword.hljs-atrule,
 .hljs-regexp {
   color: #{{base0C-hex}};
 }
@@ -116,10 +120,10 @@ base0F - #{{base0F-hex}} -  Deprecated, Opening/Closing Embedded Language Tags, 
 
 /* base0E - Keywords, Storage, Selector, Markup Italic, Diff Changed */
 .hljs-type,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
+/* .hljs-selector-id, */
+/* .hljs-selector-class, */
+/* .hljs-selector-attr, */
+/* .hljs-selector-pseudo, */
 .hljs-template-tag,
 .diff .hljs-meta,
 .hljs-keyword {
@@ -130,12 +134,11 @@ base0F - #{{base0F-hex}} -  Deprecated, Opening/Closing Embedded Language Tags, 
   font-style: italic;
 }
 
-.hljs-meta-keyword {
-  /* color: #{{base0E-hex}}; */
-  font-weight: bold;
-}
-
 /* base0F - Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?> */
 .hljs-meta {
   color: #{{base0F-hex}};
+}
+
+.hljs-meta-keyword {
+  font-weight: bold;
 }
