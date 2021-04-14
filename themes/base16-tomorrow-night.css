@@ -7,21 +7,21 @@
 */
 
 /*
-base00 - #1d1f21 -  Default Background
-base01 - #282a2e -  Lighter Background (Used for status bars, line number and folding marks)
-base02 - #373b41 -  Selection Background
-base03 - #969896 -  Comments, Invisibles, Line Highlighting
+base00 - #2d2d2d -  Default Background
+base01 - #393939 -  Lighter Background (Used for status bars, line number and folding marks)
+base02 - #515151 -  Selection Background
+base03 - #999999 -  Comments, Invisibles, Line Highlighting
 base04 - #b4b7b4 -  Dark Foreground (Used for status bars)
-base05 - #c5c8c6 -  Default Foreground, Caret, Delimiters, Operators
+base05 - #cccccc -  Default Foreground, Caret, Delimiters, Operators
 base06 - #e0e0e0 -  Light Foreground (Not often used)
 base07 - #ffffff -  Light Background (Not often used)
-base08 - #cc6666 -  Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-base09 - #de935f -  Integers, Boolean, Constants, XML Attributes, Markup Link Url
-base0A - #f0c674 -  Classes, Markup Bold, Search Text Background
-base0B - #b5bd68 -  Strings, Inherited Class, Markup Code, Diff Inserted
-base0C - #8abeb7 -  Support, Regular Expressions, Escape Characters, Markup Quotes
-base0D - #81a2be -  Functions, Methods, Attribute IDs, Headings
-base0E - #b294bb -  Keywords, Storage, Selector, Markup Italic, Diff Changed
+base08 - #f2777a -  Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+base09 - #f99157 -  Integers, Boolean, Constants, XML Attributes, Markup Link Url
+base0A - #ffcc66 -  Classes, Markup Bold, Search Text Background
+base0B - #99cc99 -  Strings, Inherited Class, Markup Code, Diff Inserted
+base0C - #66cccc -  Support, Regular Expressions, Escape Characters, Markup Quotes
+base0D - #6699cc -  Functions, Methods, Attribute IDs, Headings
+base0E - #cc99cc -  Keywords, Storage, Selector, Markup Italic, Diff Changed
 base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
 */
 
@@ -29,22 +29,24 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
   display: block;
   overflow-x: auto;
   padding: 1em;
-  color: #c5c8c6;
-  background: #1d1f21;
+  color: #cccccc;
+  background: #2d2d2d;
 }
 
 .hljs ::selection {
-  color: #373b41;
+  color: #515151;
 }
 
+
+/* purposely do not highlight these things */
 .hljs-formula,
 .hljs-params,
 .hljs-property
 {}
 
-/* base03 - #969896 -  Comments, Invisibles, Line Highlighting */
+/* base03 - #999999 -  Comments, Invisibles, Line Highlighting */
 .hljs-comment {
-  color: #969896;
+  color: #999999;
 }
 
 /* base04 - #b4b7b4 -  Dark Foreground (Used for status bars) */
@@ -52,13 +54,15 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
   color: #b4b7b4;
 }
 
-/* base05 - #c5c8c6 -  Default Foreground, Caret, Delimiters, Operators */
-.hljs-subst {
-  color: #c5c8c6;
-}
+/* base05 - #cccccc -  Default Foreground, Caret, Delimiters, Operators */
+.hljs-subst,
 .hljs-punctuation,
 .hljs-operator {
-  color: #c5c8c6;
+  color: #cccccc;
+}
+
+.hljs-operator {
+  opacity: 0.7;
 }
 
 /* base08 - Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
@@ -68,7 +72,7 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 .hljs-selector-tag,
 .hljs-name,
 .hljs-deletion {
-  color: #cc6666;
+  color: #f2777a;
 }
 
 /* base09 - Integers, Boolean, Constants, XML Attributes, Markup Link Url */
@@ -77,7 +81,7 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 .hljs-link,
 .hljs-attr,
 .hljs-literal {
-  color: #de935f;
+  color: #f99157;
 }
 
 /* base0A - Classes, Markup Bold, Search Text Background */
@@ -85,12 +89,17 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 .hljs-class .hljs-title,
 .hljs-title.class_
 {
-  color: #f0c674;
+  color: #ffcc66;
+}
+
+/* allow possibilities for people doing custom things with plugins */
+.hljs mark {
+  color: #ffcc66;
 }
 
 .hljs-strong {
   font-weight:bold;
-  color: #f0c674;
+  color: #ffcc66;
 }
 
 /* base0B - Strings, Inherited Class, Markup Code, Diff Inserted */
@@ -98,7 +107,7 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 .hljs-addition,
 .hljs-title.class_.inherited__,
 .hljs-string {
-  color: #b5bd68;
+  color: #99cc99;
 }
 
 /* base0C - Support, Regular Expressions, Escape Characters, Markup Quotes */
@@ -107,7 +116,7 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 .hljs-quote,
 .hljs-keyword.hljs-atrule,
 .hljs-regexp {
-  color: #8abeb7;
+  color: #66cccc;
 }
 
 /* base0D - Functions, Methods, Attribute IDs, Headings */
@@ -115,7 +124,7 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 .hljs-attribute,
 .hljs-title.function_,
 .hljs-section {
-  color: #81a2be;
+  color: #6699cc;
 }
 
 /* base0E - Keywords, Storage, Selector, Markup Italic, Diff Changed */
@@ -127,10 +136,10 @@ base0F - #a3685a -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 .hljs-template-tag,
 .diff .hljs-meta,
 .hljs-keyword {
-  color: #b294bb;
+  color: #cc99cc;
 }
 .hljs-emphasis {
-  color: #b294bb;
+  color: #cc99cc;
   font-style: italic;
 }
 

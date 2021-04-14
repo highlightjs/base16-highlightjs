@@ -37,6 +37,8 @@ base0F - #d43552 -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
   color: #6e6b5e;
 }
 
+
+/* purposely do not highlight these things */
 .hljs-formula,
 .hljs-params,
 .hljs-property
@@ -53,12 +55,14 @@ base0F - #d43552 -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 }
 
 /* base05 - #a6a28c -  Default Foreground, Caret, Delimiters, Operators */
-.hljs-subst {
-  color: #a6a28c;
-}
+.hljs-subst,
 .hljs-punctuation,
 .hljs-operator {
   color: #a6a28c;
+}
+
+.hljs-operator {
+  opacity: 0.7;
 }
 
 /* base08 - Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
@@ -85,6 +89,11 @@ base0F - #d43552 -  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?p
 .hljs-class .hljs-title,
 .hljs-title.class_
 {
+  color: #ae9513;
+}
+
+/* allow possibilities for people doing custom things with plugins */
+.hljs mark {
   color: #ae9513;
 }
 
