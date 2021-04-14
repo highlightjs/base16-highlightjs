@@ -31,7 +31,7 @@ Build.  Using node for example:
 
 ## License
 
-Highlight.js is released under the MIT License. See the [LICENSE][1] file
+`highlightjs-base16` is released under the MIT License. See the [LICENSE][1] file
 for details.
 
 [1]: https://github.com/highlightjs/base16-highlightjs/blob/main/LICENSE
