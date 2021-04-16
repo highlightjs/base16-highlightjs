@@ -102,11 +102,6 @@ base0F  #F2C38F  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php 
   color: #A8CE93;
 }
 
-/* allow possibilities for people doing custom things with plugins */
-.hljs mark {
-  color: #A8CE93;
-}
-
 .hljs-strong {
   font-weight:bold;
   color: #A8CE93;

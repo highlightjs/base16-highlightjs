@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ../..
+./node_modules/base16-builder-node/bin/base16-cli.js build
