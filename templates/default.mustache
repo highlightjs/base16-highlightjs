@@ -157,10 +157,19 @@ code.hljs {
 }
 
 /* base0F - Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?> */
-.hljs-meta {
+.hljs-meta,
+/*
+  prevent top level .keyword and .string scopes
+  from leaking into meta by accident
+*/
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string
+{
   color: #{{base0F-hex}};
 }
 
+.hljs-meta .hljs-keyword,
+/* for v10 compatible themes */
 .hljs-meta-keyword {
   font-weight: bold;
 }
